@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    >
+
+
+    <com.iloomo.widget.PullToRefresh.PullToRefreshLayout
+        android:id="@+id/pullview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/refresh_head" />
+
+        <com.iloomo.widget.PullToRefresh.NOViewPagerPullableListView
+            android:id="@+id/mlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.iloomo.widget.PullToRefresh.NOViewPagerPullableListView>
+
+        <include layout="@layout/load_more" />
+    </com.iloomo.widget.PullToRefresh.PullToRefreshLayout>
+
+</RelativeLayout>

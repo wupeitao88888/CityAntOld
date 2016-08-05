@@ -456,20 +456,20 @@ public class ActivitySupport extends FragmentActivity implements
         // jxbApplication.exit();
         Intent intent = new Intent(Settings.ACTION_WIRELESS_SETTINGS);
         context.startActivity(intent);
-        // dialog.cancel();
-        // }
-        // }, new OnClickListener() {
-        //
-        // @Override
-        // public void onClick(View v) {
-        // // TODO Auto-generated method stub
-        // // Intent intent = new
-        // // Intent(Settings.ACTION_WIRELESS_SETTINGS);
-        // // context.startActivity(intent);
-        // // dialog.cancel();
-        // }
-        // }, mString(string.check_network), mString(string.checking),
-        // mString(string.checking));
+//         dialog.cancel();
+//         }
+//         }, new OnClickListener() {
+//
+//         @Override
+//         public void onClick(View v) {
+//         // TODO Auto-generated method stub
+//         // Intent intent = new
+//         // Intent(Settings.ACTION_WIRELESS_SETTINGS);
+//         // context.startActivity(intent);
+//         // dialog.cancel();
+//         }
+//         }, mString(string.check_network), mString(string.checking),
+//         mString(string.checking));
 
     }
 
@@ -547,106 +547,6 @@ public class ActivitySupport extends FragmentActivity implements
         return getResources().getString(string);
     }
 
-    // 转换unicode
-    public String loadConvert(String theString) {
-        char aChar;
-        int len = theString.length();
-        StringBuffer outBuffer = new StringBuffer(len);
-
-        for (int x = 0; x < len; ) {
-            aChar = theString.charAt(x++);
-            if (aChar == '\\') {
-                aChar = theString.charAt(x++);
-                if (aChar == 'u') {
-                    // Read the xxxx
-                    int value = 0;
-                    for (int i = 0; i < 4; i++) {
-                        aChar = theString.charAt(x++);
-                        switch (aChar) {
-                            case '0':
-                            case '1':
-                            case '2':
-                            case '3':
-                            case '4':
-                            case '5':
-                            case '6':
-                            case '7':
-                            case '8':
-                            case '9':
-                                value = (value << 4) + aChar - '0';
-                                break;
-                            case 'a':
-                            case 'b':
-                            case 'c':
-                            case 'd':
-                            case 'e':
-                            case 'f':
-                                value = (value << 4) + 10 + aChar - 'a';
-                                break;
-                            case 'A':
-                            case 'B':
-                            case 'C':
-                            case 'D':
-                            case 'E':
-                            case 'F':
-                                value = (value << 4) + 10 + aChar - 'A';
-                                break;
-                            default:
-                                throw new IllegalArgumentException(
-                                        "Malformed \\uxxxx encoding.");
-                        }
-                    }
-                    outBuffer.append((char) value);
-                } else {
-                    if (aChar == 't')
-                        aChar = '\t';
-                    else if (aChar == 'r')
-                        aChar = '\r';
-                    else if (aChar == 'n')
-                        aChar = '\n';
-                    else if (aChar == 'f')
-                        aChar = '\f';
-                    outBuffer.append(aChar);
-                }
-            } else
-                outBuffer.append(aChar);
-        }
-        return outBuffer.toString();
-    }
-
-    private static String key = "a6U&1$Ip[Jr/sed]Rfvn=O>Mz+}lXN*%-gLcGD|0";
-
-    public static String byte2hex(byte[] b) {
-        String hs = "";
-        String stmp = "";
-        for (int n = 0; n < b.length; n++) {
-            stmp = (Integer.toHexString(b[n] & 0XFF));
-            if (stmp.length() == 1) {
-                hs = hs + "0" + stmp;
-            } else {
-                hs = hs + stmp;
-            }
-        }
-        return hs;
-    }
-
-    // SHA1 加密实例
-    public static String encryptToSHA(String info) {
-        byte[] digesta = null;
-        try {
-            // 得到一个SHA-1的消息摘要
-            MessageDigest alga = MessageDigest.getInstance("SHA-1");
-            // 添加要进行计算摘要的信息
-            alga.update(info.getBytes());
-            // 得到该摘要
-            digesta = alga.digest();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
-        // 将摘要转为字符串a
-        String rs = byte2hex(digesta);
-        return rs + key;
-    }
 
     // 获取唯一标示
     public String getOnly() {
@@ -707,21 +607,6 @@ public class ActivitySupport extends FragmentActivity implements
             return System.currentTimeMillis() + "";
         }
 
-    }
-
-    public void releaseImageView(ImageView imageView) {
-        Drawable d = imageView.getDrawable();
-        if (d != null)
-            d.setCallback(null);
-        imageView.setImageDrawable(null);
-        imageView.setBackgroundDrawable(null);
-    }
-
-    public void releaseRelativeLayout(RelativeLayout imageView) {
-        Drawable d = imageView.getBackground();
-        if (d != null)
-            d.setCallback(null);
-        imageView.setBackgroundDrawable(null);
     }
 
 

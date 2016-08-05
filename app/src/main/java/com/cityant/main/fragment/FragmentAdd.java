@@ -11,32 +11,21 @@ import com.iloomo.base.FragmentSupport;
 
 public class FragmentAdd extends FragmentSupport {
 
-    private ListView mlist;
-    private FragmentHomeAdapter fragmentHomeAdapter = null;
 
+//    设置titleBar
     @Override
     public View setTitleBar(View view) {
         isLeftVisibility(false);
         return super.setTitleBar(view);
     }
 
+    //设置View
     @Override
     public View initView() {
         View view = LayoutInflater.from(context).inflate(R.layout.fragment_message, null);
+        //设置标题
         setTitle("添加");
-//        mlist = (ListView) view.findViewById(R.id.mlist);
-//        List<String> list = new ArrayList<>();
-//        for (int i = 0; i < 100; i++) {
-//            list.add("王尼玛" + i);
-//        }
-//        fragmentHomeAdapter = new FragmentHomeAdapter(context, list);
-//        mlist.setAdapter(fragmentHomeAdapter);
-//        mlist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                startActivity(new Intent(context, ChatActivity.class));
-//            }
-//        });
+
         return view;
     }
 

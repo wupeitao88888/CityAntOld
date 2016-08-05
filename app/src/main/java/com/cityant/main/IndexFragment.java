@@ -17,8 +17,10 @@ import com.iloomo.widget.MainTabHost;
  */
 public class IndexFragment extends TabFragmentActivity {
     private MainTabHost mainTabSupport;
+    //布局
     private Integer[] imgTab = { R.layout.tab_main_home,R.layout.tab_main_knock,R.layout.tab_main_add,
             R.layout.tab_main_message, R.layout.tab_main_my };
+    //Fragment使用
     private Class[] classTab = { FragmentHome.class,FragmentKnock.class,FragmentAdd.class, FragmentMessage.class,
             FragmentMy.class };
     // tab选中背景 drawable 样式图片 背景都是同一个,背景颜色都是 白色。。。

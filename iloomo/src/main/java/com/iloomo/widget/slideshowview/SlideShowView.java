@@ -288,7 +288,6 @@ public class SlideShowView extends FrameLayout {
                 jxbViewPageSelectListener.succeedCallBack(pos % imageViewsList.size());
             }
         }
-
     }
 
     private class SlideShowTask implements Runnable {

@@ -31,7 +31,7 @@ public class WelcomeActivity extends ActivitySupport {
             public void onAnimationEnd(Animator animator) {
                 mIntent(WelcomeActivity.this, IndexFragment.class);
                 finish();
-        }
+            }
 
             @Override
             public void onAnimationCancel(Animator animator) {

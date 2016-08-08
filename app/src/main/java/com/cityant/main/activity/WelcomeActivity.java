@@ -1,7 +1,8 @@
-package com.cityant.main;
+package com.cityant.main.activity;
 
 import android.os.Bundle;
 
+import com.cityant.main.R;
 import com.iloomo.base.ActivitySupport;
 import com.iloomo.widget.StartPic;
 import com.nineoldandroids.animation.Animator;
@@ -20,7 +21,7 @@ public class WelcomeActivity extends ActivitySupport {
         setContentView(R.layout.layout_welcome);
         setRemoveTitle();
         welcome = (StartPic) findViewById(R.id.welcome);
-        welcome.setStartPicImage(R.drawable.ic_launcher);
+        welcome.setStartPicImage(R.drawable.white);
         welcome.setAnimationListener(new Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(Animator animator) {
@@ -29,7 +30,7 @@ public class WelcomeActivity extends ActivitySupport {
 
             @Override
             public void onAnimationEnd(Animator animator) {
-                mIntent(WelcomeActivity.this, IndexFragment.class);
+                mIntent(WelcomeActivity.this, LoginActivity.class);
                 finish();
             }
 

@@ -122,6 +122,7 @@ public class ActivitySupport extends FragmentActivity implements
         LinearLayout.LayoutParams lpcontent = new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.MATCH_PARENT);
+        customContentView.setBackground(getResources().getDrawable(R.drawable.white));
         linearLayout.addView(customContentView, lpcontent);
 
         super.setContentView(linearLayout);

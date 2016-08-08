@@ -10,7 +10,7 @@
         android:id="@+id/ll_title_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#0000ff"
+        android:background="@drawable/title_bar"
         android:paddingTop="25dp">
 
         <RelativeLayout
@@ -45,7 +45,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="标题"
-                    android:textColor="@android:color/white"
+                    android:textColor="@color/title_text"
                     android:textSize="17sp" />
             </RelativeLayout>
 
@@ -63,7 +63,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:text="下一步"
-                    android:textColor="@android:color/white"
+                    android:textColor="@color/title_text"
                     android:textSize="15sp"
                     android:visibility="gone" />
 

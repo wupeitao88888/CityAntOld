@@ -9,9 +9,9 @@
         android:id="@+id/ll_title_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="25dp"
         android:background="@drawable/title_bar"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingTop="25dp">
 
         <RelativeLayout
             android:layout_width="match_parent"

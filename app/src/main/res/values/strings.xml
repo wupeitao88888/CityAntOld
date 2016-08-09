@@ -12,4 +12,6 @@
     <string name="code">输入验证码</string>
     <string name="reinsrtpw">再次输入密码</string>
     <string name="sendcode">发送验证码</string>
+    <string name="bindingphone">绑定手机号</string>
+
 </resources>

@@ -23,7 +23,7 @@ public class FragmentSupport extends Fragment implements IFragmentSupport {
     public Context context;
     public String title;
     public View rootView;// 缓存Fragment view
-    private TitleBar titleBar;
+    public TitleBar titleBar;
     private LinearLayout linearLayout;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

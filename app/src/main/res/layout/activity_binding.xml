@@ -29,6 +29,7 @@
             android:phoneNumber="true" />
 
         <Button
+            android:id="@+id/sendcode"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:background="@drawable/button_send_code"
@@ -60,7 +61,7 @@
             android:id="@+id/code_number"
             style="@style/login_edittext"
             android:layout_weight="1"
-            android:hint="@string/phonenumber"
+            android:hint="@string/code"
             android:maxLength="11"
             android:phoneNumber="true" />
 
@@ -78,6 +79,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/login_button"
         android:layout_width="fill_parent"
         android:layout_height="45dp"
         android:layout_margin="20dp"

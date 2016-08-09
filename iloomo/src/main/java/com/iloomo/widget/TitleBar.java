@@ -25,6 +25,9 @@ public class TitleBar extends FrameLayout {
     private Context mContext;
     private TextView lc_left_menu, lc_center_menu, lc_right_menu;
     private ImageView lc_left_back, lc_right_image;
+    private ImageView frist_menu;
+    private ImageView second_menu;
+
     private RelativeLayout lc_left_back_all, lc_center_all, lc_right_all, ll_title, ll_title_content;
     private OnClickListener backListenetForUser;
     private OnClickListener backListener = new OnClickListener() {
@@ -64,6 +67,9 @@ public class TitleBar extends FrameLayout {
         ll_title = (RelativeLayout) inflate.findViewById(R.id.ll_title);
         lc_right_menu = (TextView) inflate.findViewById(R.id.lc_right_menu);
         lc_right_image = (ImageView) inflate.findViewById(R.id.lc_right_image);
+        frist_menu = (ImageView) inflate.findViewById(R.id.frist_menu);
+        second_menu = (ImageView) inflate.findViewById(R.id.second_menu);
+
         lc_left_back_all.setOnClickListener(backListener);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             ll_title_content.setPadding(0, (int) ViewUtil.dip2px(context, 25.0f), 0, 0);
@@ -232,9 +238,59 @@ public class TitleBar extends FrameLayout {
     }
 
     /**
-     * 设置右边图片内容
+     * 设置右边字体监听
      */
     public void setRightTitleImageListener(OnClickListener l) {
         lc_right_image.setOnClickListener(l);
+    }
+
+    /**
+     * 设置右边第一个图片内容
+     */
+    public void setRightFristMenuimg(int draw) {
+        frist_menu.setBackgroundResource(draw);
+    }
+
+    /***
+     * 设置右边第一个图片监听
+     *
+     * @param l
+     */
+    public void setRightFristMenuimgListener(OnClickListener l) {
+        frist_menu.setOnClickListener(l);
+    }
+
+    /***
+     * 设置右边第一个图片是否显示
+     *
+     * @param visbility
+     */
+    public void setFristMenuimgIsVisbility(int visbility) {
+        frist_menu.setVisibility(visbility);
+    }
+
+    /**
+     * 设置右边第二个图片内容
+     */
+    public void setRightSecondMenuimg(int draw) {
+        second_menu.setBackgroundResource(draw);
+    }
+
+    /***
+     * 设置右边第二个图片监听
+     *
+     * @param l
+     */
+    public void setRightSecondMenuimgListener(OnClickListener l) {
+        second_menu.setOnClickListener(l);
+    }
+
+    /***
+     * 设置右边第一个图片是否显示
+     *
+     * @param visbility
+     */
+    public void setSecondMenuimgIsVisbility(int visbility) {
+        second_menu.setVisibility(visbility);
     }
 }
